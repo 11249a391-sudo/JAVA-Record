@@ -1,0 +1,29 @@
+import java.io.*;
+import java.awt.*;
+import java.applet.*;
+import java.awt.event.*;
+/* <applet code="CardDemo" width=250 height=150>
+</applet> */
+public class CardDemo extends Applet implements ActionListener {
+  Button b1, b2, b3;
+  Panel buttonPanel;
+  CardLayout buttonCardLayout;
+  public void init() {
+    buttonPanel = new Panel();
+    add(buttonPanel);
+    buttonCardLayout = new CardLayout();
+    buttonPanel.setLayout(buttonCardLayout);
+    b1 = new Button("First button");
+    b1.addActionListener(this);
+    buttonPanel.add(b1, "First button");
+    b2 = new Button("Second Button");
+    b2.addActionListener(this);
+    buttonPanel.add(b2, "Second Button");
+    b3 = new Button("Third Button");
+    b3.addActionListener(this);
+    buttonPanel.add(b3, "Third Button");
+  }
+  public void actionPerformed(ActionEvent e) {
+    buttonCardLayout.next(buttonPanel);
+  }
+}
