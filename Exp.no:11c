@@ -1,0 +1,19 @@
+import java.awt.*;
+import java.applet.*;
+import java.io.*;
+import java.util.*;
+/* <applet code="InsertDemo" width=400 height=200>
+</applet> */
+public class InsertDemo extends Applet {
+  public void init() {
+    setBackground(Color.cyan);
+    setLayout(new BorderLayout());
+    add(new Button("This is across the top"), BorderLayout.NORTH);
+    add(new Button("The footer message goes here"), BorderLayout.SOUTH);
+    add(new Button("Right"), BorderLayout.EAST);
+    add(new Button("Left"), BorderLayout.WEST);
+    String msg = "The reasonable man adopts himself to the world";
+    add(new TextArea(msg), BorderLayout.CENTER);
+  }
+  public Insets getInsets() { return new Insets(10, 10, 10, 10); }
+}
