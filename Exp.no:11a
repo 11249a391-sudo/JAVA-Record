@@ -1,0 +1,12 @@
+import java.awt.*;
+import java.applet.Applet;
+/* <applet code="grid.class" height=300 width=300>
+</applet> */
+public class grid extends Applet {
+  public void init() {
+    setLayout(new GridLayout(5, 2));
+    String names[] = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J"};
+    for (int i = 0; i < names.length; i++) add(new Button(names[i]));
+  }
+  public Insets getInsets() { return new Insets(20, 20, 20, 20); }
+}
