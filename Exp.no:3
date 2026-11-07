@@ -1,0 +1,38 @@
+public class StringOperations {
+  public static void main(String[] args) {
+    String str1 = "Hello", str2 = "Java";
+    String result = str1 + " " + str2;
+    System.out.println("1. Strings: " + str1 + ", " + str2);
+    System.out.println("2. +: " + result);
+    System.out.println("   concat(): " + str1.concat(" ").concat(str2));
+    System.out.println("3. length: " + result.length());
+    System.out.println("4. charAt(): " + result.charAt(0) + "," + result.charAt(6));
+    String str3 = "Hello Java", str4 = "hello java";
+    System.out.println("5. equals(): " + result.equals(str3));
+    System.out.println("6. equalsIgnoreCase(): " + result.equalsIgnoreCase(str4));
+    System.out.println("7. compareTo(): " + result.compareTo(str3));
+    System.out.println("8. Uppercase: " + result.toUpperCase());
+    System.out.println("9. Lowercase: " + result.toLowerCase());
+    System.out.println("10. contains(): " + result.contains("Java"));
+    System.out.println("11. startsWith(): " + result.startsWith("Hello"));
+    System.out.println("12. endsWith(): " + result.endsWith("Java"));
+    System.out.println("13. indexOf(): " + result.indexOf("Java"));
+    System.out.println("14. lastIndexOf(): " + result.lastIndexOf("a"));
+    System.out.println("15. substring(): " + result.substring(6) + ", " + result.substring(0, 5));
+    System.out.println("16. replace(): " + result.replace("Java", "Python"));
+    System.out.println("17. replace char: " + result.replace('a', 'o'));
+    String str5 = "  Hello Java  ";
+    System.out.println("18. trim(): [" + str5.trim() + "]");
+    System.out.println("19. strip(): [" + str5.strip() + "]");
+    System.out.println("20. isEmpty(): " + "".isEmpty());
+    System.out.println("21. isBlank(): " + "   ".isBlank());
+    String[] arr = "Java,Python,C++".split(",");
+    System.out.print("22. split(): ");
+    for (String s : arr) System.out.print(s + " ");
+    char[] ch = str1.toCharArray();
+    System.out.print("23. toCharArray(): ");
+    for (char c : ch) System.out.print(c + " ");
+    System.out.println("24. String content: " + str1);
+    System.out.println("25. valueOf(): " + String.valueOf(100));
+  }
+}
